@@ -15,18 +15,10 @@
 # BLOCK 0	BLOCK 1		BLOCK 2		BLOCK 3 	BLOCK4
 # 0		4		1		0 		
 
-# Read the first digit into BLOCK #1
->,------------------------------------------------ 
-
-# Read the second digit into BLOCK #2
->,------------------------------------------------
-
-# COPY BLOCK #1 into BLOCK #3 and 0, then copy BLOCK #3 back to BLOCK #1
-[<[>>+<<<+>-]>>[<<+>>-]
-
-# Move BLOCK #3 to BLOCK #2 and decrease BLOCK #2 (DONE WITH ONE ITERATION)
-<-]
+>,------------------------------------------------ # Read into #1
+>,------------------------------------------------ # Read into #2
+[<[>>+<<<+>-]>>[<<+>>-] # COPY BLOCK #1 into BLOCK #3 and 0, then copy BLOCK #3 back to BLOCK #1
+<-] # Move BLOCK #3 to BLOCK #2 and decrease BLOCK #2 (DONE WITH ONE ITERATION)
 
 # Move to BLOCK #0 and increase by ASCII '0' (DEC 48)
 <<++++++++++++++++++++++++++++++++++++++++++++++++.
-
